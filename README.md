@@ -256,6 +256,59 @@ merge는 브랜치 히스토리가 남지만, rebase는 브랜치 히스토리�
 
 merge와 rebase를 활용하여 실습진행
 
+## GitHub 사용하기
+
+### push와 pull
+
+push 할 것이 있을 시 pull 하는 두 가지 방법
+
+- `git pull --no-rebase` -> merge 방식
+
+- `git pull --rebase` -> rebase 방식
+  > 협업시 사용 OK(보통 협업할 때는 브런치를 만들어서 작업하기에 rebase를 잘 사용하지 않음. 그러나 단순히 push하기 전 rebase는 ㄱㅊ)
+
+원격 저장소에 문제가 생겨서 로컬의 것으로 강제 push를 하기 위해선 아래의 명령어를 사용할 수 있음
+
+```bash
+git push --force
+```
+
+### 원격의 브랜치 다루기
+
+로컬에서 `from-local` 이라는 브랜치를 만들고, 원격에 다음의 명령어로 브랜치를 생성할 수 있다.
+
+```bash
+git push -u origin from-local
+```
+
+브랜치 목록을 살펴보는 방법으로 아래의 명령어를 사용할 수 있다.
+
+```bash
+git branch --all
+```
+
+**원격의 브랜치 로컬에 받아오기**
+
+github에서 `from-remote` 브랜치 만들기
+
+이후 아래 명령어로 변경사항 확인
+
+```bash
+git fetch
+```
+
+아래 명령어로 로컬에 같은 이름의 브랜치를 생성하여 연결하고 switch
+
+```bash
+git switch -t origin/from-remote
+```
+
+**원격의 브랜치 삭제**
+
+```bash
+git push (원격 이름) --delete (원격의 브랜치명)
+```
+
 ## Git 보다 깊이 알기
 
 ## 프로답게 커밋 관리하기
