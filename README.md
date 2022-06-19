@@ -133,6 +133,16 @@ git add tigers.yaml
 git add .
 ```
 
+2. 타임캡슐 묻기
+
+```bash
+git commit
+```
+
+3. 다음 변경사항들을 만들고 타임캡슐 묻기
+
+파일 삭제및 변경 추가 한 후, `git status`와 `git diff`로 확인해볼 수 있다.
+
 ## 차원 넘나들기
 
 ## GitHub 사용하기
